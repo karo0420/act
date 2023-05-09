@@ -20,6 +20,8 @@ jobs:
       run: |
         cp .env.example .env
         echo AWS_ACCESS_KEY_ID=osomoso>>.env
+    - name: Echo .env
+      run: cat .env
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions
